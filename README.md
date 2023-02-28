@@ -1,10 +1,5 @@
 # Prometheus HDFS FSImage Exporter
 
-![Ansible Role](https://img.shields.io/ansible/role/44536?style=flat-square)
-![Molecule Test Status](https://img.shields.io/travis/rgibert/ansible-role-prometheus-hdfs-fsimage-exporter?label=molecule&style=flat-square)
-![Ansible Quality Score](https://img.shields.io/ansible/quality/44536?style=flat-square)
-![Ansible Role](https://img.shields.io/ansible/role/d/44536?label=downloads&style=flat-square)
-
 ## Description
 
 Installs a Prometheus exporter for HDFS FSImages
@@ -43,21 +38,32 @@ Installs a Prometheus exporter for HDFS FSImages
 - none
 
 ## Example Playbook
+Create a role in your group var
+
+```bash
+vi ./inventories/group_vars/yourserverhost_legacy/prometheus.yml
+```
+Add the following
+```yaml
+---
+prometheus_hdfs_fsimage_exporter_version: 1.4.6
+```
+Now create a playbook
+
+```bash
+vi playbooks/once_off_prometheus_hdfs_exporters.yml
+```
+Now add
 
 ```yaml
-- hosts:
-    - servers
-  roles:
-    - role: rgibert.hdfs_fsimage_exporter
-      prometheus_hdfs_fsimage_exporter_version: 1.3
+    - name: include role prometheus exporters
+      ansible.builtin.include_role:
+        name: rezizter.prometheus_hdfs_fsimage_exporter
 ```
 
 ## License
 
 GPLv3
 
-## Author Information
+Forked from rgibert.ansible-role-prometheus-hdfs-fsimage-exporter
 
-Richard Gibert  
-[richard@gibert.ca](mailto:richard@gibert.ca)  
-[https://richard.gibert.ca/](https://richard.gibert.ca/)
