@@ -1,10 +1,10 @@
 ---
 prometheus_hdfs_fsimage_exporter_base_url: "https://repo.maven.apache.org/maven2"
-prometheus_hdfs_fsimage_exporter_checksum: "sha1:766847292cce8b1e2bd3833b4b934b7626b2a1cd"
+prometheus_hdfs_fsimage_exporter_checksum: "sha1:e0abd3d1efe278b75a71861bd7fc4588f3883a4b"
 prometheus_hdfs_fsimage_exporter_dl_url: "{{ prometheus_hdfs_fsimage_exporter_base_url }}/de/m3y/prometheus/exporter/fsimage/fsimage-exporter/{{ single_binary_service_version }}/fsimage-exporter-{{ single_binary_service_version }}.jar"
 prometheus_hdfs_fsimage_exporter_group: prometheus
 prometheus_hdfs_fsimage_exporter_user: prometheus
-prometheus_hdfs_fsimage_exporter_version: 1.3
+prometheus_hdfs_fsimage_exporter_version: 1.4.6
 
 prometheus_hdfs_fsimage_exporter_max_heap: 1024m
 prometheus_hdfs_fsimage_exporter_ip: 0.0.0.0
