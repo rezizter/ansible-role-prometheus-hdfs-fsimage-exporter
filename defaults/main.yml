@@ -27,8 +27,6 @@ prometheus_hdfs_fsimage_exporter_path_sets:
     paths:
       - /tmp
       - /apps/hive/warehouse
-      - /projects
-      - /data/hdfs
   - setname: userset
     paths:
       - /user
