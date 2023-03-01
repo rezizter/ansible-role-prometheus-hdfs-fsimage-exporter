@@ -19,12 +19,14 @@ prometheus_hdfs_fsimage_exporter_paths:
   - /tmp
   - /user
   - /apps/hive/warehouse
+  - /projects
 prometheus_hdfs_fsimage_exporter_skip_file_distrib_for_path_stats: true
 prometheus_hdfs_fsimage_exporter_path_sets:
   - setname: systemset
     paths:
       - /tmp
       - /apps/hive/warehouse
+      - /projects
   - setname: userset
     paths:
       - /user
