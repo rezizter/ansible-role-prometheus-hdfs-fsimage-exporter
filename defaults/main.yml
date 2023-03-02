@@ -12,7 +12,7 @@ prometheus_hdfs_fsimage_exporter_port: 9101
 prometheus_hdfs_fsimage_exporter_conf_path: /etc/prometheus
 prometheus_hdfs_fsimage_exporter_conf_file: hdfs_fsimage_exporter.yml
 
-prometheus_hdfs_fsimage_exporter_fsimage_path: /data/hdfs/name/current
+prometheus_hdfs_fsimage_exporter_fsimage_path: "{{ hdfs_fsimage_path }}"
 prometheus_hdfs_fsimage_exporter_skip_file_distrib_for_group_stats: true
 prometheus_hdfs_fsimage_exporter_skip_file_distrib_for_user_stats: false
 prometheus_hdfs_fsimage_exporter_paths:
