@@ -43,10 +43,11 @@ Create a role in your group var
 ```bash
 vi ./inventories/group_vars/yourserverhost_legacy/prometheus.yml
 ```
-Add the following
+Set the version of the exporter and location of your hdfs install on your filesystem.
 ```yaml
 ---
 prometheus_hdfs_fsimage_exporter_version: 1.4.6
+hdfs_fsimage_path: /data/hdfs/data/current
 ```
 Now create a playbook
 
